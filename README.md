@@ -35,7 +35,7 @@ Project Workflow
 7. Dashboard Development
 8. Business Insights & Recommendations
 
-1. Business Understanding
+Business Understanding
 
 The Business Understanding phase establishes the business goals, identifies key challenges, and defines how data analytics can support informed decision-making. It provides the foundation for the entire analytics pipeline by aligning the project with real-world business objectives.
 
@@ -50,7 +50,7 @@ This phase includes:
 - Key Performance Indicators (KPIs): Business metrics used to measure performance.
 - Business Hypotheses (Optional): Assumptions that will be validated through data analysis.
 
-2. Data Loading and Understanding
+Data Loading and Understanding
 
 Data Loading
 load_data.py
