@@ -147,18 +147,59 @@ This module transforms the raw retail sales dataset into a business-ready datase
 
 Features Created
 
-Standardizes column names by converting them to lowercase, removing extra spaces, and replacing spaces with underscores to ensure consistent naming.
-Calculates revenue as the product of unit price and units sold, creating a key business performance metric.
-Extracts time-based features from the transaction date, including year, month, month number, and day, to support trend and seasonality analysis.
-Transforms promotion indicators into descriptive categories (Promoted and Non-Promoted) for improved readability and reporting.
-Computes stock utilization to measure inventory efficiency by comparing units sold with available stock while handling division-by-zero cases.
-Categorizes delivery performance into performance groups (Fast, Moderate, Slow, and Very Slow) based on delivery lead time.
-Segments products by price into Low, Medium, and High price categories for comparative analysis.
-Creates demand-level indicators by classifying products into High Demand or Low Demand using the median units sold as the threshold.
-Generates a revenue validation column (log_revenue) to facilitate future analytical transformations.
+- Standardizes column names by converting them to lowercase, removing extra spaces, and replacing spaces with underscores to ensure consistent naming.
+- Calculates revenue as the product of unit price and units sold, creating a key business performance metric.
+- Extracts time-based features from the transaction date, including year, month, month number, and day, to support trend and seasonality analysis.
+- Transforms promotion indicators into descriptive categories (Promoted and Non-Promoted) for improved readability and reporting.
+- Computes stock utilization to measure inventory efficiency by comparing units sold with available stock while handling division-by-zero cases.
+- Categorizes delivery performance into performance groups (Fast, Moderate, Slow, and Very Slow) based on delivery lead time.
+- Segments products by price into Low, Medium, and High price categories for comparative analysis.
+- Creates demand-level indicators by classifying products into High Demand or Low Demand using the median units sold as the threshold.
+- Generates a revenue validation column (log_revenue) to facilitate future analytical transformations.
 
 Output
 
 The engineered dataset is saved as:
 
 data/feature_engineered_data.csv
+
+5. Exploratory Data Analysis (EDA)
+eda_analysis.py
+
+Description
+
+This module performs Exploratory Data Analysis (EDA) on the retail sales dataset to uncover patterns, trends, relationships, and potential anomalies. It combines statistical summaries with visualizations to better understand the data and generate insights that support business decision-making, feature engineering, and dashboard development.
+
+Analyses Performed
+- Provides a dataset overview by displaying its dimensions, column names, data types, and general information.
+- Generates descriptive statistics to summarize the distribution and central tendency of numerical variables.
+- Analyzes missing values to identify incomplete data.
+- Detects duplicate records to assess data quality.
+- Calculates revenue as price_unit × units_sold if the feature is not already available.
+- Performs univariate analysis using histograms to examine the distribution of:
+    - Units sold
+    - Unit price
+    - Revenue
+- Performs categorical analysis using bar charts to explore the distribution of:
+    - Regions
+    - Product categories
+    - Sales channels
+- Performs bivariate analysis to investigate relationships between key business variables, including:
+    - Revenue by region
+    - Revenue by product category
+    - Promotion impact on average units sold
+- Conducts correlation analysis by generating a heatmap of numerical variables to identify linear relationships.
+- Performs time-series analysis by aggregating monthly sales and visualizing sales trends over time.
+- 
+Visualizations Generated
+
+- Histograms for numerical feature distributions.
+- Bar charts for categorical feature frequencies.
+- Bar charts comparing revenue across regions and categories.
+- Promotion effectiveness analysis.
+- Correlation heatmap for numerical variables.
+- Monthly sales trend line chart.
+
+Output
+
+The module produces statistical summaries and interactive visualizations that provide insights into the dataset. These outputs support data validation, business understanding, feature engineering, and dashboard design by highlighting sales patterns, customer behavior, and relationships among key variables.
