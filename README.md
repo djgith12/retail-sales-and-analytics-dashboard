@@ -28,14 +28,14 @@ Project Workflow
 
 1. Business Understanding
 2. Data Loading and Understanding
-3. Data Cleaning & Validation
+3. Data Cleaning 
 4. Feature Engineering
 5. Exploratory Data Analysis (EDA)
 6. KPI Development
 7. Dashboard Development
 8. Business Insights & Recommendations
 
-Business Understanding
+1. Business Understanding
 
 The Business Understanding phase establishes the business goals, identifies key challenges, and defines how data analytics can support informed decision-making. It provides the foundation for the entire analytics pipeline by aligning the project with real-world business objectives.
 
@@ -50,7 +50,7 @@ This phase includes:
 - Key Performance Indicators (KPIs): Business metrics used to measure performance.
 - Business Hypotheses (Optional): Assumptions that will be validated through data analysis.
 
-Data Loading and Understanding
+2. Data Loading and Understanding
 
 Data Loading
 load_data.py
@@ -101,3 +101,64 @@ Analyses Performed
 Outcome
 
 The module provides a comprehensive overview of the raw dataset, helping identify data quality issues and ensuring that the data is well understood before preprocessing, feature engineering, and subsequent analysis.
+
+3. Data Cleaning
+data_cleaning.py
+
+Description
+
+This module cleans and validates the raw retail sales dataset to improve data quality and prepare it for feature engineering, exploratory analysis, and dashboard development. It standardizes the dataset, handles missing and invalid values, removes duplicate records, performs validation checks, and generates a cleaned dataset suitable for downstream analytical tasks.
+
+Cleaning Steps Performed
+- Standardizes column names by converting them to lowercase, removing extra spaces, and replacing spaces with underscores for consistent naming.
+- Converts data types by transforming the date column into a datetime format and converting numerical columns to appropriate numeric data types.
+- Handles missing values by:
+    - Replacing missing numerical values with the median of each column.
+    - Replacing missing categorical values with the most frequent (mode) value.
+- Removes duplicate records to ensure each transaction is represented only once.
+- Cleans categorical text values by trimming whitespace and standardizing text formatting.
+- Removes invalid records containing negative values in key numerical fields such as unit price, delivery days, and units sold.
+- Performs a basic outlier assessment by summarizing the distribution of important numerical variables.
+- Creates basic business features, including:
+    - Revenue (price_unit × units_sold)
+    - Year and month extracted from the transaction date
+    - Promotion category labels (Promoted and Non-Promoted)
+- Validates business rules by checking:
+    - Transactions where units sold exceed delivered quantity.
+    - Stock-out records where available inventory equals zero.
+
+Output
+
+The cleaned dataset is saved as:
+
+data/cleaned_sales_data.csv
+
+Outcome
+
+The module produces a high-quality, standardized dataset with improved consistency, completeness, and validity. By addressing missing values, duplicate records, formatting inconsistencies, and invalid data, it ensures the dataset is ready for feature engineering, exploratory data analysis, visualization, and predictive modeling.
+
+5. Feature Engineering
+
+feature_engineering.py
+
+Description
+
+This module transforms the raw retail sales dataset into a business-ready dataset by creating meaningful features that support exploratory analysis, KPI reporting, and dashboard development. It derives new variables from existing data to improve analytical capabilities and provide deeper business insights.
+
+Features Created
+
+Standardizes column names by converting them to lowercase, removing extra spaces, and replacing spaces with underscores to ensure consistent naming.
+Calculates revenue as the product of unit price and units sold, creating a key business performance metric.
+Extracts time-based features from the transaction date, including year, month, month number, and day, to support trend and seasonality analysis.
+Transforms promotion indicators into descriptive categories (Promoted and Non-Promoted) for improved readability and reporting.
+Computes stock utilization to measure inventory efficiency by comparing units sold with available stock while handling division-by-zero cases.
+Categorizes delivery performance into performance groups (Fast, Moderate, Slow, and Very Slow) based on delivery lead time.
+Segments products by price into Low, Medium, and High price categories for comparative analysis.
+Creates demand-level indicators by classifying products into High Demand or Low Demand using the median units sold as the threshold.
+Generates a revenue validation column (log_revenue) to facilitate future analytical transformations.
+
+Output
+
+The engineered dataset is saved as:
+
+data/feature_engineered_data.csv
