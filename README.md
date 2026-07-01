@@ -76,27 +76,27 @@ This module performs an initial exploratory assessment of the raw dataset before
 
 Analyses Performed
 
--Displays dataset dimensions (rows and columns).
--Lists all available column names.
--Examines data types and overall dataset information.
--Previews the first and last records.
--Generates descriptive statistics for numerical variables.
--Identifies missing values and reports their distribution.
--Detects duplicate records.
--Counts unique values for each feature.
--Explores the distribution of categorical variables.
--Summarizes numerical variables using statistical measures.
--Checks for negative values in numerical columns.
--Identifies stock-out records where inventory equals zero.
--Examines the distribution of promotional activities.
--Computes correlations among numerical variables.
--Provides an initial data quality checklist highlighting potential issues such as:
-    -Missing values
-    -Duplicate records
-    -Incorrect data types
-    -Negative values
-    -Outliers
-    -Inconsistent categorical labels
+- Displays dataset dimensions (rows and columns).
+- Lists all available column names.
+- Examines data types and overall dataset information.
+- Previews the first and last records.
+- Generates descriptive statistics for numerical variables.
+- Identifies missing values and reports their distribution.
+- Detects duplicate records.
+- Counts unique values for each feature.
+- Explores the distribution of categorical variables.
+- Summarizes numerical variables using statistical measures.
+- Checks for negative values in numerical columns.
+- Identifies stock-out records where inventory equals zero.
+- Examines the distribution of promotional activities.
+- Computes correlations among numerical variables.
+- Provides an initial data quality checklist highlighting potential issues such as:
+    - Missing values
+    - Duplicate records
+    - Incorrect data types
+    - Negative values
+    - Outliers
+    - Inconsistent categorical labels
 
 Outcome
 
