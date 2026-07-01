@@ -23,3 +23,29 @@ Technology Stack
 - seaborn
 - plotly
 - streamlit
+
+Project Workflow
+
+1. Business Understanding
+2. Data Understanding
+3. Data Cleaning & Validation
+4. Feature Engineering
+5. Exploratory Data Analysis (EDA)
+6. KPI Development
+7. Dashboard Development
+8. Business Insights & Recommendations
+
+1. Business Understanding
+
+The Business Understanding phase establishes the business goals, identifies key challenges, and defines how data analytics can support informed decision-making. It provides the foundation for the entire analytics pipeline by aligning the project with real-world business objectives.
+
+This phase includes:
+
+- Business Context: Overview of the retail business and the sales dataset.
+- Business Problem: Identification of challenges related to sales performance, inventory, promotions, and operations.
+- Business Objectives: Definition of measurable goals to improve business performance.
+- Stakeholders: Identification of the primary users of the dashboard and insights.
+- Business Questions: Key business questions the analysis aims to answer.
+- Success Criteria: Metrics used to evaluate the success of the project.
+- Key Performance Indicators (KPIs): Business metrics used to measure performance.
+- Business Hypotheses (Optional): Assumptions that will be validated through data analysis.
