@@ -27,7 +27,7 @@ Technology Stack
 Project Workflow
 
 1. Business Understanding
-2. Data Understanding
+2. Data Loading and Understanding
 3. Data Cleaning & Validation
 4. Feature Engineering
 5. Exploratory Data Analysis (EDA)
@@ -49,3 +49,55 @@ This phase includes:
 - Success Criteria: Metrics used to evaluate the success of the project.
 - Key Performance Indicators (KPIs): Business metrics used to measure performance.
 - Business Hypotheses (Optional): Assumptions that will be validated through data analysis.
+
+2. Data Loading and Understanding
+
+Data Loading
+load_data.py
+
+Description
+
+This module is responsible for loading the raw retail sales dataset into a pandas DataFrame. It centralizes data access so that the dataset can be imported consistently across different scripts in the project.
+
+Features
+
+Loads the Excel dataset from the project's data directory.
+Uses pandas.read_excel() for efficient data import.
+Provides an optional verbose mode to preview the loaded dataset.
+Returns the dataset as a pandas DataFrame for further processing.
+Includes a standalone execution block for quick testing.
+
+Data Understanding
+data_understanding.py
+
+Description
+
+This module performs an initial exploratory assessment of the raw dataset before data cleaning and analysis. The objective is to understand the dataset's structure, completeness, quality, and overall characteristics while identifying potential data issues that may affect downstream analysis.
+
+Analyses Performed
+
+-Displays dataset dimensions (rows and columns).
+-Lists all available column names.
+-Examines data types and overall dataset information.
+-Previews the first and last records.
+-Generates descriptive statistics for numerical variables.
+-Identifies missing values and reports their distribution.
+-Detects duplicate records.
+-Counts unique values for each feature.
+-Explores the distribution of categorical variables.
+-Summarizes numerical variables using statistical measures.
+-Checks for negative values in numerical columns.
+-Identifies stock-out records where inventory equals zero.
+-Examines the distribution of promotional activities.
+-Computes correlations among numerical variables.
+-Provides an initial data quality checklist highlighting potential issues such as:
+    -Missing values
+    -Duplicate records
+    -Incorrect data types
+    -Negative values
+    -Outliers
+    -Inconsistent categorical labels
+
+Outcome
+
+The module provides a comprehensive overview of the raw dataset, helping identify data quality issues and ensuring that the data is well understood before preprocessing, feature engineering, and subsequent analysis.
