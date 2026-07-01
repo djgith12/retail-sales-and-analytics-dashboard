@@ -11,4 +11,15 @@ Project Objectives
 - Clean and standardize the dataset for analysis.
 - Create business-focused features such as revenue, promotion category, stock utilization, delivery performance, price segment, and demand level.
 - Calculate retail KPIs including revenue, units sold, average price, stock-out rate, average delivery days, and stock utilization.
-- Build an interactive Streamlit dashboard with filters and Plotly charts
+- Build an interactive Streamlit dashboard with filters and Plotly charts.
+
+Technology Stack
+
+- Python
+- pandas
+- numpy
+- openpyxl
+- matplotlib
+- seaborn
+- plotly
+- streamlit
