@@ -33,7 +33,7 @@ Project Workflow
 5. Exploratory Data Analysis (EDA)
 6. KPI Development
 7. Dashboard Development
-8. Business Insights & Recommendations
+
 
 1. Business Understanding
 
@@ -304,3 +304,10 @@ The final output is an interactive Streamlit dashboard that combines:
 - Filters
 - Charts
 - Raw data inspection
+
+
+A modern, high-density interactive analytics dashboard designed to monitor and evaluate key retail performance indicators. Built using Streamlit, Pandas, and Plotly, this web application translates raw sales transactions into actionable business insights with an optimized UI layout.
+
+Live Application
+You can interact with the live deployed dashboard here:  
+Launch Live Streamlit Dashboard ->(https://retail-sales-and-analytics-dashboard-h6orbakljhtyorhph9quux.streamlit.app/)
