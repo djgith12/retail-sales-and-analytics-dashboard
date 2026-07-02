@@ -203,3 +203,19 @@ Visualizations Generated
 Output
 
 The module produces statistical summaries and interactive visualizations that provide insights into the dataset. These outputs support data validation, business understanding, feature engineering, and dashboard design by highlighting sales patterns, customer behavior, and relationships among key variables.
+
+6. KPI Development
+
+The KPI Development module converts cleaned retail sales data into meaningful business metrics that help evaluate overall business performance and support data-driven decision-making.
+
+Key Features
+- Calculates Total Revenue and Total Units Sold
+- Computes Average Unit Price
+- Analyzes Revenue by Region, Category, and Brand
+- Evaluates Promotion Effectiveness
+- Measures Stock-Out Rate
+- Calculates Average Delivery Days
+- Computes Stock Utilization
+- Exports a KPI summary to data/kpi_summary.csv for dashboard visualization.
+
+This module provides a concise overview of financial, sales, operational, and marketing performance, serving as the foundation for the analytics dashboard.
