@@ -219,3 +219,88 @@ Key Features
 - Exports a KPI summary to data/kpi_summary.csv for dashboard visualization.
 
 This module provides a concise overview of financial, sales, operational, and marketing performance, serving as the foundation for the analytics dashboard.
+
+
+7. Dashboard Development (Streamlit)
+
+This step focuses on building an interactive Retail Sales Analytics Dashboard using Streamlit. The dashboard transforms processed sales data into business insights through KPIs, visualizations, and filters.
+
+Objective
+
+To create a user-friendly, interactive dashboard that enables stakeholders to explore sales performance, analyze trends, and make data-driven decisions.
+
+Key Components
+- Data Integration
+
+The dashboard connects to the cleaned sales dataset (cleaned_sales_data.csv). If unavailable, it falls back to the raw dataset loader. Data is standardized and preprocessed for consistency before visualization.
+
+- Page Configuration
+
+Streamlit page settings are defined to optimize user experience:
+
+Wide layout for better visualization space
+Custom title: Retail Sales Dashboard
+Sidebar disabled for a clean interface
+- Data Preparation
+
+Before visualization:
+
+Column names are standardized
+Date fields are converted to datetime format
+Revenue is calculated as:
+Revenue = Price Unit × Units Sold
+- Interactive Filters
+
+Users can dynamically filter data by:
+
+Region
+Category
+Channel
+
+These filters update all KPIs and charts in real time.
+
+- KPI Dashboard
+
+Key performance indicators displayed at the top:
+
+Total Revenue
+Total Units Sold
+Average Unit Price
+Stock-Out Cases
+
+These KPIs provide a quick snapshot of business performance.
+
+- Visual Analytics
+
+The dashboard includes interactive Plotly visualizations:
+
+Sales Trend Over Time (time-series analysis)
+Revenue by Region (geographical performance)
+Revenue by Category (product performance)
+Promotion Impact Analysis (marketing effectiveness)
+Correlation Heatmap (relationship between numerical variables)
+- Data Exploration
+
+A raw data preview table is included to:
+
+Validate calculations
+Inspect sample records
+Improve transparency
+Business Value
+
+This dashboard enables stakeholders to:
+
+- Monitor real-time sales performance
+- Identify high and low-performing segments
+- Evaluate marketing effectiveness
+- Understand regional and category trends
+- Support data-driven business decisions
+
+Output
+
+The final output is an interactive Streamlit dashboard that combines:
+
+- KPIs
+- Filters
+- Charts
+- Raw data inspection
